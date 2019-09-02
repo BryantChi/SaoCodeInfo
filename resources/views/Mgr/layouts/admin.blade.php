@@ -23,10 +23,10 @@
 
 </head>
 
-<body>
-    <nav class="site-header py-1 bg-dark">
+<body style="font-family:Microsoft JhengHei;background-repeat: no-repeat;background-size: cover;background-position:center center;background-image: url({{asset('img/adminbg.png')}});">
+    <nav class="navbar-dark bg-dark">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2" href="#">
+            <a class="navbar-brand" href="#">
                 <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="d-block mx-auto" focusable="false" role="img">
@@ -40,13 +40,10 @@
                     <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
                 </svg>
             </a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+            <a class="navbar-brand" href="{{ route('MgrIndex') }}">首頁</a>
+            <a class="navbar-brand" href="#">登錄管理</a>
+            <a class="navbar-brand" href="{{ route('MgrManagerIndex') }}">帳號管理</a>
+            <a class="navbar-brand" href="{{ route('MgrLogout') }}">登出</a>
         </div>
     </nav>
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
 use Hash;
+use Session;
 use App\saoadmin_info as saoadmin;
 use App\saologin_info as saologin;
 
@@ -78,6 +79,11 @@ class AdminController extends Controller
             /*$validator->errors()->add('password', '成功');
             return redirect()->route('Mgr.Login')->withErrors($validator)->withInput();*/
         }
+    }
+
+    public function logout(Request $request){
+        Session::flush();
+        return redirect()->route('MgrLogin');
     }
 
     /**

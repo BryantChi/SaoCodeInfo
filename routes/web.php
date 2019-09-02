@@ -54,5 +54,12 @@ Route::prefix('Mgr')->namespace('Mgr')->group(function () {
         Route::any('', 'AdminController@index')->name('MgrIndex');  
         
         Route::any('Logout', 'AdminController@logout')->name('MgrLogout');
+
+        Route::any('AccountMgr', 'AccountMgrController@index')->name('MgrManagerIndex');
+        Route::any('AccountMgr/Create', 'AccountMgrController@create')->name('MgrManagerCreate');
+        Route::any('AccountMgr/Edit/{id}', 'AccountMgrController@edit')->name('MgrManagerEdit');
+        Route::get('AccountMgr/Delete/{id}', 'AccountMgrController@delete')->name('MgrManagerDelete');
+
+
     });
 });
