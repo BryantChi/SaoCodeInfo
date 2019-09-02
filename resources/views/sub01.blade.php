@@ -135,6 +135,14 @@
                 var rule = /^09[0-9]{8}$/;
                 var rule2 = /^(5|6|8|9)[0-9]{7}$/;
                 if(rule.test(phone) || rule2.test(phone)){
+                    var location = "";
+                    if(rule.test(phone)){
+                        location = "台灣";
+                    }
+                    
+                    if(rule2.test(phone)){
+                        location = "香港";
+                    }
 
                     FB.getLoginStatus(function(response) {
                         
@@ -147,7 +155,7 @@
                                 $.ajax({ 
                                     url: "{{ route('SaoLogin') }}" , 
                                     type: 'POST',
-                                    data: { _token : '<?php echo csrf_token()?>', tel : phone, type : mobiletype, id : fbid, name : fbname, mail : fbemail, codes: code,accessToken:accessToken  },
+                                    data: { _token : '<?php echo csrf_token()?>', tel : phone, type : mobiletype, id : fbid, name : fbname, mail : fbemail, codes: code, locations: location,accessToken:accessToken  },
                                     dataType: 'json', 
                                     success: function(data){ 
                                         //console.log(data.res);
@@ -184,7 +192,7 @@
                                         $.ajax({ 
                                             url: "{{ route('SaoLogin') }}" , 
                                             type: 'POST',
-                                            data: { _token : '<?php echo csrf_token()?>', tel : phone, type : mobiletype, id : fbid, name : fbname, mail : fbemail, codes: code,accessToken:accessToken },
+                                            data: { _token : '<?php echo csrf_token()?>', tel : phone, type : mobiletype, id : fbid, name : fbname, mail : fbemail, codes: code, locations: location,accessToken:accessToken },
                                             dataType: 'json', 
                                             success: function(data){ 
                                                 //console.log(data.res);                                                

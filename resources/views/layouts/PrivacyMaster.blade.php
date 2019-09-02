@@ -29,6 +29,15 @@
 
   gtag('config', 'G-N9R8Y3MZBV');
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146643945-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146643945-1');
+</script>
     <style>
             .nv-h{
                 padding-top: 35px;

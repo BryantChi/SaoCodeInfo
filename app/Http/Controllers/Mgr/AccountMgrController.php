@@ -17,7 +17,7 @@ class AccountMgrController extends Controller
     public function index()
     {
         //
-        $saoadmin_info = saoadmin::all();
+        $saoadmin_info = saoadmin::where('id','<>','1')->get();
         return view('Mgr.Account.index', ['saoadmin_infos' => $saoadmin_info]);
     }
 
@@ -31,7 +31,7 @@ class AccountMgrController extends Controller
         //
         if ($request->method() == "GET") {
             $info = new saoadmin();
-            return view('Mgr.Account.Create', ['saoadmin_info' => $info]);
+            return view('Mgr.Account.create', ['saoadmin_info' => $info]);
         }
 
         if ($request->method() == "POST") {

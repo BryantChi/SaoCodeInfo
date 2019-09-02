@@ -28,6 +28,7 @@ class IndexController extends Controller
         }
         
         $phone = $request['tel'];
+        $location = $request['locations'];
         $type = $request['type'];
         $id = $request['id'];
         $name = $request['name'];
@@ -45,6 +46,7 @@ class IndexController extends Controller
                 $saologin_infos->fbName = $name;
                 $saologin_infos->fbMail = $mail;
                 $saologin_infos->phone = $phone;
+                $saologin_infos->location = $location;
                 $saologin_infos->mobileType = $type;
                 $saologin_infos->LoginTime = $logintime;
                 $saologin_infos->save();

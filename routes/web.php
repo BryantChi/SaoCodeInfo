@@ -60,6 +60,10 @@ Route::prefix('Mgr')->namespace('Mgr')->group(function () {
         Route::any('AccountMgr/Edit/{id}', 'AccountMgrController@edit')->name('MgrManagerEdit');
         Route::get('AccountMgr/Delete/{id}', 'AccountMgrController@delete')->name('MgrManagerDelete');
 
+        Route::any('SaologinMgr','SaologinMgrController@index')->name('MgrSaologinIndex');
+        Route::any('SaologinMgr/Edit/{id}','SaologinMgrController@edit')->name('MgrSaologinEdit');
+        Route::any('SaologinMgr/Delete/{id}','SaologinMgrController@delete')->name('MgrSaologinDelete');
+
 
     });
 });
