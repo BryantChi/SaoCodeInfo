@@ -63,6 +63,7 @@ Route::prefix('Mgr')->namespace('Mgr')->group(function () {
         Route::any('SaologinMgr','SaologinMgrController@index')->name('MgrSaologinIndex');
         Route::any('SaologinMgr/Edit/{id}','SaologinMgrController@edit')->name('MgrSaologinEdit');
         Route::any('SaologinMgr/Delete/{id}','SaologinMgrController@delete')->name('MgrSaologinDelete');
+        Route::any('SaologinMgr/ExcelExport','SaologinMgrController@excelExport')->name('MgrSaologinExcelExport');
 
 
     });

@@ -12,9 +12,9 @@
 <div class="h-100 p-3 m-5" style="font-family:Microsoft JhengHei;background:rgb(255, 255, 240, 0.9);overflow: scroll;">
 
         <br>
-        <!--p>
-            <a href=" //route('MgrDonationCreate', ['link' => 'donate']) }}">新增</a>
-        </p-->
+        <p>
+            <a class="btn btn-primary" href="{{ route('MgrSaologinExcelExport') }}">匯出Excel</a>
+        </p>
         <div class="row p-3">
         
             <div class="ml-auto">
@@ -91,8 +91,26 @@
 
 <script>
 
-    function del(id){
+    function del(delurl){
         var check = confirm('是否刪除此登錄資料?');
+        if(check == true){
+            $.ajax({
+                url: delurl, 
+                type: 'POST',
+                data: { _token : '<?php echo csrf_token()?>'},
+                dataType: 'json', 
+                success: function(data){
+                    if(data.res == "true")
+                    {
+                        alert('資料刪除成功!!!');
+                        window.location.reload();
+                    }
+                },
+                error: function(xhr, type){ 
+                    alert('Ajax error!') ;
+                } 
+            })
+        }
     }
 
 </script>

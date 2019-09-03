@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Mgr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\saologin_info as saologin;
+use App\saoinvite_info as saoinvite;
+use Excel;
 
 class SaologinMgrController extends Controller
 {
@@ -26,6 +28,40 @@ class SaologinMgrController extends Controller
         $saologin_infos = saologin::where(\DB::raw('concat(IFNULL(`fbUid`,""),IFNULL(`fbName`,""),IFNULL(`mobileType`,""),IFNULL(`phone`,""),IFNULL(`location`,""),IFNULL(`LoginTime`,""),IFNULL(`created_at`,""),IFNULL(`updated_at`,""))'), 'LIKE', '%' . $search . '%')->orderBy('updated_at', 'DESC')->paginate(20);
 
         return view('Mgr.login.index', ['saologin_infos' => $saologin_infos, 'search' => $search]);
+    }
+
+    function excelExport(){
+        $saologin_infos = saologin::orderBy('updated_at', 'DESC')->get();
+        $saologin_excel = [
+            ['序號', 'FBUID', 'FB名稱', '裝置', '手機號碼', '地區', '登錄時間', '建檔時間', '更新時間']
+        ];
+        foreach($saologin_infos as $si){
+
+            $saologin = [$si->id, '>'.$si->fbUid, $si->fbName, $si->mobileType, $si->phone, $si->location, $si->LoginTime, $si->created_at, $si->updated_at];
+            array_push($saologin_excel, $saologin);
+        }
+
+        date_default_timezone_set('Asia/Taipei');
+        $datetime = date("Ymd_His");
+
+        Excel::create('登錄資料_' . $datetime,function ($excel) use ($saologin_excel){
+            $excel->sheet('score', function ($sheet) use ($saologin_excel){
+             $sheet->rows($saologin_excel)->setFontSize(12);
+             $sheet->setAutoSize(true);
+             $sheet->setWidth('F', 10);
+             $sheet->setColumnFormat(array(
+                'E' => '@'
+                ));
+            $sheet->cells('A1:I1', function($cells) {
+                $cells->setAlignment('center');
+                $cells->setFontWeight('bold');
+                });
+            
+            });
+           })->download('xlsx');
+
+        
+
     }
 
     /**
@@ -97,9 +133,13 @@ class SaologinMgrController extends Controller
 
     public function delete($id){
         $info = saologin::where('id', $id)->first();
+        $fbuid = $info->fbUid;
         $info->delete();
 
-        return redirect()->route('MgrSaologinIndex');
+        $info2 = saoinvite::where('invitefbUid', $fbuid)->get();
+        $info2->delete();
+
+        return json_encode(array("res" => "true"));
     }
 
     /**
