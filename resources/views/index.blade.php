@@ -48,7 +48,7 @@
         padding-top: 4vmin;
         padding-bottom: 4vmin;
         width: 75vmin;
-        min-height:469px;
+        min-height:509px;
         margin-left: 36vw;
         background-image:url({{asset('img/PC/sub01_box.png')}});
         background-size:100% 100%;
@@ -232,7 +232,7 @@
             background-image:url({{asset('img/Mobile/sub01_box_m.png')}});
             margin-left: auto!important;
             margin-right: auto!important;
-            min-height:401px;
+            min-height:461px;
             width: 100%;
             font-size:3.5vmin;
             margin-top:60vmin!important; 
@@ -269,7 +269,7 @@
         
 
         .loginForm{
-            min-height:380px;
+            min-height:420px;
             margin-left: auto!important;
             margin-right: auto!important;
             margin-top:78vmin!important;
@@ -346,16 +346,16 @@
             </tr>
             <tr>
                 <td class="px-5 mx-5">
-                        <p> - 如有發現使用不當或非法手段參與活動，官方有權取消改玩家及所有相關賬號之獲獎資格。</p>
-                        <p> - 事前登録活動時間為開始日起至游戲開放當天的 23：59：59。</p>
-                        <p> - 每個Facebook賬號及電話號碼僅限參與一次登錄活動。</p>
-                        <p> - 登陸人數達指定目標時，將贈送该檔次以下的相對應所有獎勵</p>
-                        <p> （範例：登陸人數達到30萬人時，將贈送全體玩家 10萬人+20萬人 + 30萬人的獎勵）</p>
-                        <p> - 好友邀請相關獎品將於活動結束后30天内隨機抽出，並通過官方粉絲團公佈后發獎，贈品僅限寄送台灣地區。</p>
+                        <p> - 如有發現使用不當或非法手段參與活動，官方有權取消改玩家及所有相關帳號之獲獎資格。</p>
+                        <p> - 事前登錄活動時間為開始日起至遊戲開放當天的 23：59：59。</p>
+                        <p> - 每個Facebook帳號及電話號碼僅限參與一次登錄活動。</p>
+                        <p> - 登錄人數達指定目標時，將贈送該檔次以下的相對應所有獎勵</p>
+                        <p> （範例：登錄人數達到30萬人時，將贈送全體玩家 10萬人+20萬人 + 30萬人的獎勵）</p>
+                        <p> - 好友邀請相關獎品將於活動結束後30天内隨機抽出，並通過官方粉絲團公佈後發獎，贈品僅限寄送台灣地區。</p>
                         <p> - 如有未盡事宜，主辦單位保有變更、調整及終止活動之權利，變更內容將由官方網站或者官方粉絲團公告，恕不另行通知。</p>
-                        <p> - 活動所有獎勵不得轉讓、折抵現金，若拒絕領取則視同放棄得獎資格。</p>
+                        <p> - 活動所有獎勵不得轉讓、折抵現金，若拒絕領取規則視同放棄得獎資格。</p>
                         <p> - 盜用他人的個人訊息時，將取消得獎資格並有可能追究刑事責任。</p>
-                        <p> - 如需咨詢個人訊息搜集及其他活動相關事項的更多訊息，請聯絡客服中心：bdtoweb@gmail.com。</p>
+                        <p> - 如需諮詢個人訊息搜集及其他活動相關事項的更多訊息，請聯絡客服中心：bdtoweb@gmail.com。</p>
                         <p> - 如個人資料輸入錯誤導致發生的問題，恕不補發。</p>
                         <p> - 如設置了簡訊過濾設定，將有可能無法正常接收提示簡訊。</p>
                         <p> - 已完成登錄的資料，將無法修改。</p>

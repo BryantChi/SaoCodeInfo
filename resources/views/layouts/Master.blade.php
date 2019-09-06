@@ -239,7 +239,7 @@
             nav {
                 height: auto !important;
                 background-image: url()!important;
-                background-color: rgb(255, 255, 240, 0.7) 
+                background-color: rgb(255, 255, 240, 0.7);
                 /*background-color: azure;*/
                 /*opacity: 0.7;*/
             }
@@ -364,7 +364,7 @@
 
         <nav class="navbar navbar-expand-md navbar-light "
             style="height:180px;width:100%;background-image: url({{URL::asset('img/PC/bg.png')}});background-size: 1300px;background-repeat:no-repeat;position:absolute;z-index:3">
-            <a class="" href="{{ route('Index') }}"><img class="mainlogo" src="{{URL::asset('img/PC/logo.png')}}" alt=""></a>
+            <a class="" href="{{ route('Index') }}"><img id="mainlogo" class="mainlogo" src="{{URL::asset('img/PC/logo.png')}}" alt=""></a>
 
             <button class="navbar-toggler ml-auto mr-1" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
@@ -496,18 +496,21 @@
             if (winWidth < 768) {
                 $('#maintitle').attr("src","{{asset('img/Mobile/main_title_m.png')}}").removeClass('maintitle').addClass('maintitle_2');
                 $('.navbar-nav').removeClass('mb-2');
+                $('#mainlogo').attr("src","{{asset('img/Mobile/logo_m.png')}}");
     
             }else if(winWidth > 768){
                 $('#maintitle').attr("src","{{asset('img/PC/main_title.png')}}").removeClass('maintitle_2').addClass('maintitle');
                 $('.navbar-nav').addClass('mb-2');
+                $('#mainlogo').attr("src","{{asset('img/PC/logo.png')}}");
             }
         });
         var winWidth = window.innerWidth;
         if (winWidth <= 768) {
             $('#maintitle').attr("src","{{asset('img/Mobile/main_title_m.png')}}").removeClass('maintitle').addClass('maintitle_2');
-    
+            $('#mainlogo').attr("src","{{asset('img/Mobile/logo_m.png')}}");
         }else if(winWidth > 768){
             $('#maintitle').attr("src","{{asset('img/PC/main_title.png')}}").removeClass('maintitle_2').addClass('maintitle');
+            $('#mainlogo').attr("src","{{asset('img/PC/logo.png')}}");
         }
 
         var items = document.getElementsByClassName("layer");

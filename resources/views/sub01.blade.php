@@ -32,7 +32,7 @@
 
         </div>
 
-        <div class="pt-1" style="display:none;">
+        <div class="pt-1">
             <label for="">登入FB+粉絲團按讚</label>
             <div class="fb-like" data-href="https://www.facebook.com/saoars.as/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
             
