@@ -380,16 +380,16 @@
                 <div class="container-fuild" >
                     <table class="mx-auto p-5">
                         <tr>
-                            <td>
-                                    ©RK/K/SA                            
+                            <td id="privacy1">
+                                ©2017 REKI KAWAHARA/KADOKAWA CORPORATION AMW/SAO-A Project                             
                             </td>
                             <td rowspan="2">
                                 <img class="px-2" width="80" src="{{asset('img/PC/pg12.jpg')}}" alt="">
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                    ©BNEI
+                            <td id="privacy2">
+                                ©BANDAI NAMCO Entertainment Inc.
                             </td>
                         </tr>
                     </table>
@@ -443,9 +443,12 @@
         var winWidth = window.innerWidth;
         if (winWidth < 768) {
             $('#sub01title').attr("src","{{asset('img/Mobile/sub01_title_m.png')}}").removeClass('sub01title').addClass('sub01title_2');
-
+            $('#privacy1').text('©RK/K/SA');
+            $('#privacy2').text('©BNEI');
         }else if(winWidth > 768){
             $('#sub01title').attr("src","{{asset('img/PC/sub01_title.png')}}").removeClass('sub01title_2').addClass('sub01title');
+            $('#privacy1').text('©2017 REKI KAWAHARA/KADOKAWA CORPORATION AMW/SAO-A Project');
+            $('#privacy2').text('©BANDAI NAMCO Entertainment Inc.');
         }
     });
     var winWidth = window.innerWidth;
