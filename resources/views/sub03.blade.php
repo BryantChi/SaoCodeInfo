@@ -179,13 +179,20 @@
                 width: 76%!important;
                 margin-top: 0vmin!important;
                 margin-left: 12vw!important;
+                margin-top:0!important;
+                z-index: auto!important;
+                position:relative;
+                float:left;
             }
 
             .sub03content{
                 width: 85%!important;
-                margin-top: 30vmin!important;
                 margin-left: 9vw!important;
                 content: url({{asset('img/Mobile/sub03_content_m.png')}});
+                margin-top:0!important;
+                z-index: auto!important;
+                position:relative;
+                float:left;
             }
             .sub03character{
                 display: none;
@@ -208,27 +215,25 @@
         @media (max-width: 576.98px ){
             .sub03title_2{
                 width: 76%!important;
-                margin-top: 23vmin!important;
                 margin-left: 12vw!important;
             }
 
             .sub03content{
                 width: 85%!important;
-                margin-top:53vmin!important;
                 margin-left: 9vw!important;
                 content: url({{asset('img/Mobile/sub03_content_m.png')}});
             }
 
             .sub3btngroup{                
-                margin-top: 147vmin!important;
-                margin-left: 29vw!important;
+                margin-top: 125vmin!important;
+                margin-left: 28.5vw!important;
             }
 
         }
 
 </style>
 
-<div class="" style="height:100%;display:flex;position:relative;overflow: hidden!important;" >
+<div class="" style="height:100%;position:relative;overflow: hidden!important;" >
     <img id="sub03title" class="sub03title" src="{{asset('img/PC/sub03_title.png')}}" alt="">
     <img id="sub03content" class="sub03content" src="{{asset('img/PC/sub03_content.png')}}" alt="">
     <img id="sub03character" class="sub03character" src="{{asset('img/PC/sub03_character.png')}}" alt="">

@@ -154,13 +154,19 @@
     @media (max-width: 768.98px) {
         .sub02title_2{
             width: 100%!important;
-            margin-top: 20vmin!important;
+            margin-top:0!important;
+            z-index: auto!important;
+            position:relative;
+            float:left;
         }
         .sub02gift{
             width: 95%!important;
-            margin-top: 50vmin!important;
             margin-left: 0vw!important;
             content: url({{asset('img/Mobile/sub02_gift0_m.png')}});
+            margin-top:0!important;
+            z-index: auto!important;
+            position:relative;
+            float:left;
         }
         .sub02tree{
             display: none;
@@ -172,18 +178,16 @@
 
     @media (max-width: 576.98px) {
         .sub02title_2{
-            width: 100%!important;
-            margin-top: 50vmin!important;
+            width: 100%!important;            
         }
         .sub02gift{
-            margin-top: 80vmin!important;
             margin-left: 0vw!important;
         }
     }
 
 </style>
 
-<div class="" style="height:100%;display:flex;position:relative;overflow-x: hidden!important;" >
+<div class="" style="height:100%;position:relative;overflow: hidden!important;" >
     <img id="sub02title" class="sub02title" src="{{asset('img/PC/sub02_title.png')}}" alt="">
     <img id="sub02gift" class="sub02gift" src="{{asset('img/PC/sub02_gift0.png')}}" alt="">
     <img id="sub02tree" class="sub02tree" src="{{asset('img/PC/sub02_tree0.png')}}" alt="" >

@@ -8,7 +8,7 @@
     }
 
 </style>
-<div class="" style="height:100%;display:flex;" >
+<div class="" style="height:100%;" >
     <img id="sub01title" class="sub01title" src="{{asset('img/PC/sub01_title.png')}}" alt="">
     
     <img class="sub01girl" src="{{asset('img/PC/character.png')}}" alt="">  
@@ -92,7 +92,7 @@
         <img type="image" src="{{URL::asset('img/PC/app_ios_big.png')}}" alt="">
     </div>
     
-    
+    <div style="clear: both;"></div>
 
 </div>
 

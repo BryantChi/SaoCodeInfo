@@ -48,7 +48,7 @@
         padding-top: 4vmin;
         padding-bottom: 4vmin;
         width: 75vmin;
-        min-height:509px;
+        /*min-height:509px;*/
         margin-left: 36vw;
         background-image:url({{asset('img/PC/sub01_box.png')}});
         background-size:100% 100%;
@@ -118,7 +118,12 @@
     
     .btngolog2{
         border: none;
-        animation: twinkle2 0.6s alternate infinite;
+        width: 34%;
+        /*animation: twinkle2 0.6s alternate infinite;*/
+    }
+
+    .btngolog2:hover{
+        width: 37%;
     }
 
     @keyframes twinkle2 {
@@ -214,30 +219,45 @@
         }
     }
 
-    @media (max-width: 768.98px) {
+    @media (max-width: 767.98px) {
 
         .log {
+            padding-top: 5%;
+            padding-bottom: 10%;
+            height: auto;
             background-image: url({{asset('img/Mobile/bg_m-2.jpg')}});
-    }
+            background-size:100% 100%;
+        }
 
-    .log2 {
-        background-image: url({{asset('img/Mobile/bg_m-3.jpg')}});
-    }
+        .log2 {
+            padding-top: 5%;
+            padding-bottom: 10%;
+            height: auto;
+            background-image: url({{asset('img/Mobile/bg_m-3.jpg')}});
+            background-size:100% 100%;
+        }
 
-    .log3 {
-        background-image: url({{asset('img/Mobile/bg_m-4.jpg')}});
-    }
+        .log3 {
+            padding-top: 5%;
+            padding-bottom: 10%;
+            height: auto;
+            background-image: url({{asset('img/Mobile/bg_m-4.jpg')}});
+            background-size:100% 100%;
+        }
 
         .loginForm{
             background-image:url({{asset('img/Mobile/sub01_box_m.png')}});
             margin-left: auto!important;
             margin-right: auto!important;
-            min-height:461px;
+            /*min-height:451px;*/
             width: 100%;
             font-size:3.5vmin;
-            margin-top:60vmin!important; 
             left: 0;
-            right: 0;           
+            right: 0;      
+            margin-top:0;
+            z-index: auto!important;
+            position:relative;
+            float:left; 
         }
 
         .sub01girl{
@@ -245,19 +265,26 @@
         }
 
         .sub01title_2{
-            width: 100%;
-            margin-top: 24vmin!important;
+            width: 100%;            
+            height:100%;
+            /*margin-top: 24vmin!important;*/
             margin-left: 0!important;
+            margin-top:0;
+            z-index: auto!important;
+            position:relative;
+            float:left; 
+            text-align: center;
         }
 
         .applink{
-            margin-top: 124vmin!important;
-            margin-left: auto!important;      
-            z-index: 1!important;
-            position: absolute;
+            margin-left: auto!important;
             left: 0;
             right: 0; 
             text-align: center;
+            margin-top:0;
+            z-index: auto!important;
+            position:relative;
+            float:left;
         }
 
         .sub04notice{
@@ -269,19 +296,29 @@
         
 
         .loginForm{
-            min-height:420px;
+            /*min-height:420px;*/
             margin-left: auto!important;
             margin-right: auto!important;
-            margin-top:78vmin!important;
             font-size:5vmin;
+            margin-top:0;
+            z-index: auto!important;
+            position:relative;
+            float:left; 
+
         }
         .sub01title_2{
-           margin-top: 40vmin!important;
+           margin-top:0;
+           z-index: auto!important;
+           position:relative;
+           float:left; 
             
         }
 
         .applink{
-            margin-top: 176vmin!important;
+            margin-top:0;
+            z-index: auto!important;
+            position:relative;
+            float:left;
         }
 
         .applink>img{
@@ -292,12 +329,6 @@
             width: 27.5vmin;
         }
 
-    }
-
-    @media (max-width: 360.98px) {
-        .applink{
-            margin-top: 182vmin!important;
-        }
     }
 </style>
 <div id="log" class="log" style="">
