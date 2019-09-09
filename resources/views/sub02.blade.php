@@ -162,7 +162,7 @@
         .sub02gift{
             width: 95%!important;
             margin-left: 0vw!important;
-            content: url({{asset('img/Mobile/sub02_gift0_m.png')}});
+            content: url({{asset('img/Mobile/sub02_gift10_m.png')}});
             margin-top:0!important;
             z-index: auto!important;
             position:relative;
@@ -189,8 +189,8 @@
 
 <div class="" style="height:100%;position:relative;overflow: hidden!important;" >
     <img id="sub02title" class="sub02title" src="{{asset('img/PC/sub02_title.png')}}" alt="">
-    <img id="sub02gift" class="sub02gift" src="{{asset('img/PC/sub02_gift0.png')}}" alt="">
-    <img id="sub02tree" class="sub02tree" src="{{asset('img/PC/sub02_tree0.png')}}" alt="" >
+    <img id="sub02gift" class="sub02gift" src="{{asset('img/PC/sub02_gift10_get.png')}}" alt="">
+    <img id="sub02tree" class="sub02tree" src="{{asset('img/PC/sub02_tree10.png')}}" alt="" >
     <img id="sub02character" class="sub02character" src="{{asset('img/PC/sub02_character.png')}}" alt="">
 </div>
 
@@ -218,7 +218,7 @@
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
         });
 
-        $.ajax({ 
+        /*$.ajax({ 
             url: "{{ route('SaoLoginCount') }}" , 
             type: 'POST',
             data: { _token : '<?php echo csrf_token()?>' },
@@ -266,5 +266,5 @@
             error: function(xhr, type){ 
                 alert('Ajax error!') 
             } 
-        });
+        });*/
 </script>
