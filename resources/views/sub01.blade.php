@@ -7,8 +7,32 @@
         margin-bottom: 0;
     }
 
+    .googleicon{
+        width: 20vmin!important;
+    }
+
+    
+
+    .appleicon{
+        width: 16.5vmin!important;
+        
+    }
+
+    
+
+
+    @media (max-width: 767.98spx){
+        .googleicon{
+            width: 30vmin!important;
+        }
+
+        .appleicon{
+            width: 26.5vmin!important;
+        }
+    }
+
 </style>
-<div class="" style="height:100%;" >
+<div class="" style="height:100%;overflow:hidden;" >
     <img id="sub01title" class="sub01title" src="{{asset('img/PC/sub01_title.png')}}" alt="">
     
     <img class="sub01girl" src="{{asset('img/PC/character.png')}}" alt="">  
@@ -87,9 +111,13 @@
         
     </div>
 
-    <div class="applink" style="display:none;">
-        <img type="image" src="{{URL::asset('img/PC/app_google_big.png')}}" alt="">
-        <img type="image" src="{{URL::asset('img/PC/app_ios_big.png')}}" alt="">
+    <div class="applink text-center" style="display:none;">
+        <a href="https://play.google.com/store/apps/details?id=com.bandainamcoent.saoars">
+            <img class="googleicon" type="image" src="{{URL::asset('img/PC/app_google_big.png')}}" alt="">
+        </a>
+        <a href="https://apps.apple.com/us/app/id1474952614">
+            <img class="appleicon" type="image" src="{{URL::asset('img/PC/app_ios_big.png')}}" alt="">
+        </a>
     </div>
     
     <div style="clear: both;"></div>
@@ -122,6 +150,13 @@
             }
         });
 
+        var thetime = '2019-09-14 12:00:00';
+        var d = new Date(Date.parse(thetime .replace(/-/g,"/")));
+
+        var curDate = new Date();
+        if(d <= curDate){
+            $('.applink').show();
+        }
 
         $.ajaxSetup({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}

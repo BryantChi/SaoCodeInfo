@@ -106,7 +106,24 @@
 
         .btngolog{
             border: none;
-            animation: twinkle 0.6s alternate infinite;
+            /*animation: twinkle 0.6s alternate infinite;*/
+            animation: twinkle20 0.8s alternate infinite linear;
+        }
+
+        @keyframes twinkle20 {
+            0% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+
+            50% {
+                -webkit-transform: scale3d(1.15, 1.15, 1.15);
+                transform: scale3d(1.15, 1.15, 1.15);
+            }
+            100% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
         }
 
         @keyframes twinkle {
@@ -256,7 +273,7 @@
             }
 
             .btngolog{
-                width: 30%;
+                width: 30%!important;
             }
 
             @keyframes twinkle {
@@ -319,7 +336,7 @@
             }
 
             .btngolog{
-                width: 40%;
+                width: 40%!important;
             }
 
             @keyframes twinkle {
@@ -358,7 +375,7 @@
 <body
     style="font-family:Microsoft JhengHei;height:100%;">
 
-    <div id="header" class="container-fluid m-0 p-0 " style="height:100%;">
+    <div id="header" class="container-fluid m-0 p-0 " style="height:100%;overflow:hidden;" >
 
 
 

@@ -110,30 +110,53 @@
         position: absolute;
     }
 
-    .applink{
-        margin-top: 100vmin!important;
-        margin-left: 43vw!important;        
+    .applink{        
+        margin-top: 96vmin!important;
+        margin-left: 10vw!important;
+        z-index: 99!important;
+        position: absolute;
+        left: 0;
+        right: 0;  
+        /*animation: appicon 0.4s alternate infinite linear; */     
+    }
+
+    @keyframes appicon {
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
     }
 
     
     .btngolog2{
         border: none;
         width: 34%;
-        /*animation: twinkle2 0.6s alternate infinite;*/
-    }
-
-    .btngolog2:hover{
-        width: 37%;
+        animation: twinkle2 0.8s alternate infinite;
     }
 
     @keyframes twinkle2 {
-        from {
-            width: 34%;
-        }
+        0% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
 
-        to {
-            width: 37%;
-        }
+            50% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            100% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
     }
 
     .sub04notice{
@@ -145,6 +168,8 @@
         .loginForm{
             margin-left: 38vw!important;
        }
+
+       
     }
 
     @media (max-width: 1400.98px) {
@@ -154,6 +179,7 @@
         .loginForm{
             margin-left: 40vw!important;
        }
+       
     }
 
     @media (max-width: 1360.98px) {
@@ -165,6 +191,11 @@
             height: 70vmin;
             margin-left: 1vw;
        }
+       .applink{
+            margin-top: 98vmin!important;
+            margin-left: 36vw!important;        
+        }
+       
     }
     
 
@@ -214,7 +245,7 @@
 
     @media (max-width: 860.98px) {
         .applink{
-            margin-top: 102vmin!important;
+            margin-top: 98vmin!important;
             margin-left: 38vw!important;        
         }
     }
@@ -277,13 +308,14 @@
         }
 
         .applink{
+            width: 100%;
             margin-left: auto!important;
             left: 0;
             right: 0; 
             text-align: center;
-            margin-top:0;
+            margin-top:0!important;
             z-index: auto!important;
-            position:relative;
+            position: relative;
             float:left;
         }
 
@@ -316,9 +348,6 @@
 
         .applink{
             margin-top:0;
-            z-index: auto!important;
-            position:relative;
-            float:left;
         }
 
         .applink>img{

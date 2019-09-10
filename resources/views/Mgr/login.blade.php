@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>{{ $title or '慈善捐款管理介面' }}</title>
+    <title>{{ $title or '刀劍神域Alicization Rising Steel － 管理平台' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
