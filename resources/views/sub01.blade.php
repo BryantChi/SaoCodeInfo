@@ -82,7 +82,7 @@
             <div class="form-check">
                 <input class="" type="checkbox" name="agree01" id="agree01" value="agree01" >
                 <label class="" for="agree01">                        
-                    同意個人訊息搜集和使用<font color="red">（必須）</font>
+                    同意個人訊息蒐集和使用<font color="red">（必須）</font>
                 </label>
                 <a href="{{ route('Usageagreement') }}" target="_blank"><img class="privacybtn" type="image" src="{{asset('img/PC/sub01_bt1_1.gif')}}" alt=""></a>
                 
@@ -93,7 +93,7 @@
             <div class="form-check">
                 <input class="" type="checkbox" name="agree02" id="agree02" value="agree02" >
                 <label class="" for="agree02" >                        
-                    同意個人訊息處理委托<font color="red">（必須）</font>
+                    同意個人訊息處理委託<font color="red">（必須）</font>
                 </label>
                 <a href="{{ route('Privacy-policy') }}" target="_blank"><img class="privacybtn" type="image" src="{{asset('img/PC/sub01_bt1_1.gif')}}" alt=""></a>
             </div>            
